@@ -1,10 +1,10 @@
-### Which is the preferred option between callback refs and findDOMNode()?
+### 为什么推荐使用 callback refs 而非 findDOMNode()，?
 
 #### Answer
 
-Callback refs are preferred over the `findDOMNode()` API, due to the fact that `findDOMNode()` prevents certain improvements in React in the future.
+callback refs 比<code>findDOMNode</code>API更受欢迎，因为<code>findDOMNode</code>阻止了将来React的某些改进。
 
-```js
+<block-code>
 // Legacy approach using findDOMNode()
 class MyComponent extends Component {
   componentDidMount() {
@@ -26,16 +26,8 @@ class MyComponent extends Component {
     return <div ref={node => (this.node = node)} />
   }
 }
-```
+</block-code>
 
 #### Good to hear
 
-* Callback refs are preferred over `findDOMNode()`.
-
-##### Additional links
-
-* [React docs on Refs and the DOM](https://reactjs.org/docs/refs-and-the-dom.html#exposing-dom-refs-to-parent-components)
-
-<!-- tags: (react,javascript) -->
-
-<!-- expertise: (2) -->
+* Callback refs 优于<code>findDOMNode</code>。

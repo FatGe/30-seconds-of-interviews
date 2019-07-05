@@ -1,20 +1,13 @@
-### Create a standalone function `bind` that is functionally equivalent to the method `Function.prototype.bind`.
-
-```js
-function example() {
-  console.log(this)
-}
-const boundExample = bind(example, { a: true })
-boundExample.call({ b: true }) // logs { a: true }
-```
+### 实现一个<code>bind</code>函数，它在功能上等同于<code>Function.prototype.bind</code>方法。
 
 #### Answer
 
-Return a function that accepts an arbitrary number of arguments by gathering them with the rest `...` operator. From that function, return the result of calling the `fn` with `Function.prototype.apply` to apply the context and the array of arguments to the function.
+返回一个接受任意数量参数的函数，通过用其余的<code>...</code>运算符收集它们。
+从该函数返回使用<code>Function.prototype.apply</code>调用fn的结果，将上下文和参数数组应用于函数。
 
-```js
+<block-code>
 const bind = (fn, context) => (...args) => fn.apply(context, args)
-```
+</block-code>
 
 #### Good to hear
 

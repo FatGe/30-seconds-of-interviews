@@ -1,29 +1,20 @@
-### What is a closure? Can you give a useful example of one?
+### 闭包是什么? 你能给出一个有用的例子吗？?
 
 #### Answer
 
-A closure is a function defined inside another function and has access to its lexical scope even when it is executing outside its lexical scope. The closure has access to variables in three scopes:
+闭包是在另一个函数内定义的函数，即使在其词法范围之外执行，也可以访问其词法范围。
+闭包可以访问三个范围中的变量：
 
-* Variables declared in its own scope
-* Variables declared in the scope of the parent function
-* Variables declared in the global scope
+* 当前作用域内声明的变量
+* 在父函数作用域内声明的变量
+* 在全局作用域内内声明的变量
 
-In JavaScript, all functions are closures because they have access to the outer scope, but most functions don't utilise the usefulness of closures: the persistence of state. Closures are also sometimes called stateful functions because of this.
+在JavaScript中，所有函数都是闭包，因为它们可以访问外部作用域，但是大多数函数都没有利用闭包的特性：状态的持久性。因此，闭包有时也称为有状态函数。
 
-In addition, closures are the only way to store private data that can't be accessed from the outside in JavaScript. They are the key to the UMD (Universal Module Definition) pattern, which is frequently used in libraries that only expose a public API but keep the implementation details private, preventing name collisions with other libraries or the user's own code.
+此外，闭包是存储私有数据同时阻止JavaScript从外部访问的唯一方法。它们是UMD（通用模块定义）模式的关键，它经常用于只暴露公共API但保持实现细节私有的库，防止与其他库或用户自己的代码发生名称冲突。
 
 #### Good to hear
 
-* Closures are useful because they let you associate data with a function that operates on that data.
-* A closure can substitute an object with only a single method.
-* Closures can be used to emulate private properties and methods.
-
-##### Additional links
-
-* [MDN docs for closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
-* [What is a closure](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-closure-b2f0d2152b36)
-* [I never understood JavaScript closures](https://medium.com/dailyjs/i-never-understood-javascript-closures-9663703368e8)
-
-<!-- tags: (javascript) -->
-
-<!-- expertise: (2) -->
+* 闭包非常有用，因为它们允许您将数据与对该数据进行操作的函数相关联。
+* 闭包只能用一种方法替换对象。
+* 闭包可用于模拟私有属性和方法。

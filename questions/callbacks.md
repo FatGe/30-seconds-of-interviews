@@ -1,21 +1,20 @@
-### What is a callback? Can you show an example using one?
+### callback 是什么? 你能否写一个简单的例子?
 
 #### Answer
 
-Callbacks are functions passed as an argument to another function to be executed once an event has occurred or a certain task is complete, often used in asynchronous code. Callback functions are invoked later by a piece of code but can be declared on initialization without being invoked.
+回调是作为参数传递给另一个函数的函数，该函数在事件发生或某个任务完成后执行，通常在异步代码中使用。回调函数稍后由一段代码调用，但可以在初始化时声明而不被调用.
 
-As an example, event listeners are asynchronous callbacks that are only executed when a specific event occurs.
+例如，事件侦听器是异步回调，仅在发生特定事件时执行。
 
-```js
+<block-code>
 function onClick() {
   console.log("The user clicked on the page.")
 }
-document.addEventListener("click", onClick)
-```
+</block-code>
 
-However, callbacks can also be synchronous. The following `map` function takes a callback function that is invoked synchronously for each iteration of the loop (array element).
+但是，回调也可以是同步的。下面的<code>map</code>函数接受一个回调函数，该函数为循环的每次迭代（数组元素）同步调用。
 
-```js
+<block-code>
 const map = (arr, callback) => {
   const result = []
   for (let i = 0; i < arr.length; i++) {
@@ -24,19 +23,9 @@ const map = (arr, callback) => {
   return result
 }
 map([1, 2, 3, 4, 5], n => n * 2) // [2, 4, 6, 8, 10]
-```
+</block-code>
 
 #### Good to hear
 
-* Functions are first-class objects in JavaScript
+* 函数是JavaScript中的第一类对象
 * Callbacks vs Promises
-
-##### Additional links
-
-<!-- Whenever possible, link a more detailed explanation. -->
-
-* [MDN docs for callbacks](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function)
-
-<!-- tags: (javascript) -->
-
-<!-- expertise: (1) -->

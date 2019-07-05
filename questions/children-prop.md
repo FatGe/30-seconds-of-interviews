@@ -1,8 +1,8 @@
-### What is the `children` prop?
+### `children` 属性的作用什么?
 
 #### Answer
 
-`children` is part of the props object passed to components that allows components to be passed as data to other components, providing the ability to compose components cleanly. There are a number of methods available in the React API to work with this prop, such as `React.Children.map`, `React.Children.forEach`, `React.Children.count`, `React.Children.only` and `React.Children.toArray`. A simple usage example of the children prop is as follows:
+`children`是传递给组件的props对象的一部分，它允许将组件作为数据传递给其他组件，从而提供了优雅地组合组件。React API中有许多方法可用于此prop，例如`React.Children.map`, `React.Children.forEach`, `React.Children.count`, `React.Children.only` 以及 `React.Children.toArray`。
 
 ```js
 function GenericBox({ children }) {
@@ -20,13 +20,5 @@ function App() {
 
 #### Good to hear
 
-* Children is a prop that allows components to be passed as data to other components.
-* The React API provides methods to work with this prop.
-
-##### Additional links
-
-* [React docs on Children](https://reactjs.org/docs/jsx-in-depth.html#children-in-jsx)
-
-<!-- tags: (react,javascript) -->
-
-<!-- expertise: (2) -->
+* Children是一个prop，可以将组件作为数据传递给其他组件。
+* React API提供了使用此prop的方法。

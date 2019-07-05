@@ -1,15 +1,12 @@
-### How do you compare two objects in JavaScript?
+### 在 JavaScript 中如何判断两个对象相等?
 
 #### Answer
 
-Even though two different objects can have the same properties with equal values, they are not considered equal when compared using `==` or `===`. This is because they are being compared by their reference (location in memory), unlike primitive values which are compared by value.
+尽管两个不同的对象使用相同的值具有相同的属性，但使用`==`或`===`进行比较时，它们并不相同。
+这是因为比较操作是通过它们的引用（内存中的位置）进行比较，而不是比较的原始值。
 
-In order to test if two objects are equal in structure, a helper function is required. It will
-iterate through the own properties of each object to test if they have the same values, including nested objects.
-Optionally, the prototypes of the objects may also be tested for equivalence by passing `true` as the 3rd argument.
-
-Note: this technique does not attempt to test equivalence of data structures other than
-plain objects, arrays, functions, dates and primitive values.
+为了测试两个对象在结构上是否相等，需要一个辅助函数。它会迭代每个对象的属性以测试它们是否具有相同的值，包括嵌套对象。
+可选地，也可以通过传递“true”作为第三个参数来测试对象的原型的等效性。
 
 ```js
 function isDeepEqual(obj1, obj2, testPrototypes = false) {
@@ -54,14 +51,5 @@ function isDeepEqual(obj1, obj2, testPrototypes = false) {
 
 #### Good to hear
 
-* Primitives like strings and numbers are compared by their value
-* Objects on the other hand are compared by their reference (location in memory)
-
-##### Additional links
-
-* [Object Equality in JavaScript](http://adripofjavascript.com/blog/drips/object-equality-in-javascript.html)
-* [Deep comparison between two values](https://30secondsofcode.org/object#equals)
-
-<!-- tags: (javascript) -->
-
-<!-- expertise: (1) -->
+* 字符串和数字等原语按其值进行比较
+* 对象通过它们的引用（内存中的位置）进行比较
