@@ -1,28 +1,26 @@
-### What are truthy and falsy values in JavaScript?
+### 在 JavaScript 中的真值和假值都代表什么？
 
 #### Answer
 
-A value is either truthy or falsy depending on how it is evaluated in a Boolean context. Falsy means false-like and truthy means true-like. Essentially, they are values that are coerced to `true` or `false` when performing certain operations.
+值是truthy或falsy，具体取决于它在布尔上下文中的计算方式。从本质上讲，它们是在执行某些操作时被强制为“true”或“false”的值。
 
-There are 6 falsy values in JavaScript. They are:
+在 Javascript 中存在6个假值：
 
 * `false`
 * `undefined`
 * `null`
-* `""` (empty string)
+* `""` (空字符串)
 * `NaN`
-* `0` (both `+0` and `-0`)
+* `0` (包括 `+0` 和 `-0`)
 
-Every other value is considered truthy.
-
-A value's truthiness can be examined by passing it into the `Boolean` function.
+其他值都会被认为是truthy。
 
 ```js
 Boolean("") // false
 Boolean([]) // true
 ```
 
-There is a shortcut for this using the logical NOT `!` operator. Using `!` once will convert a value to its inverse boolean equivalent (i.e. not false is true), and `!` once more will convert back, thus effectively converting the value to a boolean.
+使用逻辑运算符`!`是一个快捷方式。使用`！`可以将一个值转换为它的反布尔值（即，不是false为真），并且可以通过`！`再次转换回来，从而有效地将值转换为布尔值。
 
 ```js
 !!"" // false

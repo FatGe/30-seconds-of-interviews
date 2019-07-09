@@ -1,16 +1,16 @@
-### Discuss the differences between an HTML specification and a browser’s implementation thereof.
+### 讨论HTML规范与浏览器实现之间的差异。
 
 #### Answer
 
-HTML specifications such as `HTML5` define a set of rules that a document must adhere to in order to be “valid” according to that specification. In addition, a specification provides instructions on how a browser must interpret and render such a document.
+诸如“HTML5”之类的HTML规范定义了一组规则，文档必须遵守这些规则才能根据该规范“有效”。此外，规范提供了有关浏览器如何解析和呈现此类文档的说明。如果浏览器根据规范的规则处理有效文档，则称其为“支持”规范。
 
-A browser is said to “support” a specification if it handles valid documents according to the rules of the specification. As of yet, no browser supports all aspects of the `HTML5` specification (although all of the major browser support most of it), and as a result, it is necessary for the developer to confirm whether the aspect they are making use of will be supported by all of the browsers on which they hope to display their content. This is why cross-browser support continues to be a headache for developers, despite the improved specificiations.
+到目前为止，没有任何浏览器支持`HTML5`规范的所有内容（尽管所有主要浏览器都支持其中的大部分），因此，开发人员有必要确认他们使用的方面是否会使用得到他们希望展示其内容的所有浏览器的支持。这就是为什么跨浏览器支持仍然是开发人员头痛的原因，尽管具体情况有所改善。
 
 #### Good to hear
 
-* `HTML5` defines some rules to follow for an invalid `HTML5` document (i.e., one that contains syntactical errors)
-* However, invalid documents may contain anything, so it's impossible for the specification to handle all possibilities comprehensively.
-* Thus, many decisions about how to handle malformed documents are left up to the browser.
+* `HTML5`为无效的`HTML5`文档定义了一些规则（即包含语法错误的文档）;
+* 但是，无效文档可能包含任何内容，因此规范无法全面处理所有可能性;
+* 因此，许多关于如何处理格式错误的文档的决定都留给了浏览器。
 
 ##### Additional links
 

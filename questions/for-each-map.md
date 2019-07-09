@@ -1,13 +1,13 @@
-### What is the difference between the array methods `map()` and `forEach()`?
+### Array 的 `map()` 和 `forEach()` 之间有什么不同?
 
 #### Answer
 
-Both methods iterate through the elements of an array. `map()` maps each element to a new element by invoking the callback function on each element and returning a new array. On the other hand, `forEach()` invokes the callback function for each element but does not return a new array. `forEach()` is generally used when causing a side effect on each iteration, whereas `map()` is a common functional programming technique.
+两种方法都遍历数组的元素。 `map（）`通过调用每个元素上的回调函数并返回一个新数组，将每个元素映射到一个新元素。另一方面，`forEach（）`为每个元素调用回调函数，但不返回新数组。 `forEach（）`通常在每次迭代时产生副作用时使用，而`map（）`是一种常见的函数编程技术。
 
 #### Good to hear
 
-* Use `forEach()` if you need to iterate over an array and cause mutations to the elements without needing to return values to generate a new array.
-* `map()` is the right choice to keep data immutable where each value of the original array is mapped to a new array.
+* 如果需要迭代数组并修改元素而不需要返回值来生成新数组，请使用`forEach（）`；
+* `map（）`是保持数据不可变的正确选择，其中原始数组的每个值都映射到一个新数组。
 
 ##### Additional links
 

@@ -1,15 +1,15 @@
-### What is functional programming?
+### 什么是函数式编程？
 
 #### Answer
 
-Functional programming is a paradigm in which programs are built in a declarative manner using pure functions that avoid shared state and mutable data. Functions that always return the same value for the same input and don't produce side effects are the pillar of functional programming. Many programmers consider this to be the best approach to software development as it reduces bugs and cognitive load.
+函数式编程是一种范例，其中程序使用纯函数以声明方式构建，避免共享状态和可变数据。对于相同输入始终返回相同值且不产生副作用的函数是函数式编程的主旨。许多程序员认为这是软件开发的最佳方法，因为它可以减少错误和认知负担。
 
 #### Good to hear
 
-* Cleaner, more concise development experience
-* Simple function composition
-* Features of JavaScript that enable functional programming (`.map`, `.reduce` etc.)
-* JavaScript is multi-paradigm programming language (Object-Oriented Programming and Functional Programming live in harmony)
+* 更纯粹，更简洁的开发经验；
+* 简单函数的组合；
+* 支持函数式编程的JavaScript特性（`.map`，`.reduce`等）;
+* JavaScript是多范式编程语言（面向对象编程和函数编程并存）。
 
 ##### Additional links
 

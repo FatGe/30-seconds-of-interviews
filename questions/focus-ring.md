@@ -1,14 +1,14 @@
-### What is a focus ring? What is the correct solution to handle them?
+### 什么是 focus ring? 处理它们的正确解决方案是什么？
 
 #### Answer
 
-A focus ring is a visible outline given to focusable elements such as buttons and anchor tags. It varies depending on the vendor, but generally it appears as a blue outline around the element to indicate it is currently focused.
+focus ring 是可聚焦元素（如按钮和锚标记）的可见轮廓。在不同游览器内核有着不同的样式，但通常它在元素周围显示为蓝色轮廓，表示它目前正在聚焦。
 
-In the past, many people specified `outline: 0;` on the element to remove the focus ring. However, this causes accessibility issues for keyboard users because the focus state may not be clear. When not specified though, it causes an unappealing blue ring to appear around an element.
+在过去，许多人在元素上指定`outline：0;`来移除focus ring。但是，这会导致键盘用户的可访问性问题，因为焦点状态可能不明确。但是，如果未指定，则只会在元素周围显示一个毫无吸引力的蓝色环。
 
-In recent times, frameworks like Bootstrap have opted to use a more appealing `box-shadow` outline to replace the default focus ring. However, this is still not ideal for mouse users.
+最近，Bootstrap等框架选择使用更具吸引力的“box-shadow”轮廓来替换默认的焦点环。但是，这仍然不适合鼠标用户。
 
-The best solution is an upcoming pseudo-selector `:focus-visible` which can be polyfilled today with JavaScript. It will only show a focus ring if the user is using a keyboard and leave it hidden for mouse users. This keeps both aesthetics for mouse use and accessibility for keyboard use.
+最好的解决方案是即将推出的伪选择器`：focus-visible`，它现在可以用JavaScript来实现。如果用户使用键盘并且为鼠标用户隐藏它，它将仅显示对焦环。这保持了鼠标使用的美感和键盘使用的可访问性。
 
 #### Good to hear
 

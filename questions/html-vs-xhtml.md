@@ -1,20 +1,20 @@
-### What are some differences that XHTML has compared to HTML?
+### 与HTML相比，XHTML有什么不同？
 
 #### Answer
 
-Some of the key differences are:
+一些关键的区别是：
 
-* An XHTML element must have an XHTML `<DOCTYPE>`
-* Attributes values must be enclosed in quotes
-* Attribute minimization is forbidden (e.g. one has to use `checked="checked"` instead of `checked`)
-* Elements must always be properly nested
-* Elements must always be closed
-* Special characters must be escaped
+* XHTML元素必须有一个XHTML `<DOCTYPE>`
+* 属性值必须用引号括起来
+* 禁止属性的缩写（例如，必须使用`checked =“checked”`而不是`checked`）
+* 元素必须始终正确嵌套
+* 元素必须始终保持闭合
+* 必须转义特殊字符
 
 #### Good to hear
 
-* Any element can be self-closed
-* Tags ands attributes are case-sensitive, usually lowercase
+* 任何元素都可以自我封闭
+* 标签和属性区分大小写，通常为小写
 
 ##### Additional links
 

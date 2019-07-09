@@ -1,4 +1,4 @@
-### Using flexbox, create a 3-column layout where each column takes up a `col-{n} / 12` ratio of the container.
+### 使用flexbox，创建一个3列布局，其中每列占据容器的“col - {n} / 12”比率。
 
 ```html
 <div class="row">
@@ -10,7 +10,7 @@
 
 #### Answer
 
-Set the `.row` parent to `display: flex;` and use the `flex` shorthand property to give the column classes a `flex-grow` value that corresponds to its ratio value.
+将`.row`父项设置为`display：flex;`并使用`flex`简写属性为列类提供与其比值相对应的`flex-grow`值。
 
 ```css
 .row {

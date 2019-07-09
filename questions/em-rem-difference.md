@@ -1,17 +1,17 @@
-### What is the difference between `em` and `rem` units?
+### 在 CSS 中 `em` 与 `rem` 有什么区别?
 
 #### Answer
 
-Both `em` and `rem` units are based on the `font-size` CSS property. The only difference is where they inherit their values from.
+`em` 和 `rem` 都基于 `font-size` CSS属性，唯一的区别是他们从哪里继承的值。
 
-* `em` units inherit their value from the `font-size` of the parent element
-* `rem` units inherit their value from the `font-size` of the root element (`html`)
+* `em` 单位从父元素的`font-size`继承它们的值；
+* `rem`单元从根元素的`font-size`继承它们的值（`html`）。
 
-In most browsers, the `font-size` of the root element is set to `16px` by default.
+在大多数游览器中，根元素的 `font-size` 默认值为 `16px`。
 
 #### Good to hear
 
-* Benefits of using `em` and `rem` units
+* `em` 和 `rem` 的好处。
 
 ##### Additional links
 

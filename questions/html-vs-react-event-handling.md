@@ -1,20 +1,20 @@
-### What is the difference between HTML and React event handling?
+### HTML和React事件处理有什么区别？
 
 #### Answer
 
-In HTML, the attribute name is in all lowercase and is given a string invoking a function defined somewhere:
+在HTML中，属性名称全部为小写，并且给出一个字符串，调用在某处定义的函数：
 
 ```html
 <button onclick="handleClick()"></button>
 ```
 
-In React, the attribute name is camelCase and are passed the function reference inside curly braces:
+在React中，属性名称是camelCase，并在花括号内传递函数引用：
 
 ```js
 <button onClick={handleClick} />
 ```
 
-In HTML, `false` can be returned to prevent default behavior, whereas in React `preventDefault` has to be called explicitly.
+在HTML中，可以返回`false`以防止默认行为，而在React中，必须显式调用`preventDefault`。
 
 ```html
 <a href="#" onclick="console.log('The link was clicked.'); return false" />
@@ -29,7 +29,7 @@ function handleClick(e) {
 
 #### Good to hear
 
-* HTML uses lowercase, React uses camelCase.
+* HTML使用lowercase, React使用camelCase.
 
 ##### Additional links
 

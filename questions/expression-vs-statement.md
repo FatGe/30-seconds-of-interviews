@@ -1,18 +1,18 @@
-### What is the difference between an expression and a statement in JavaScript?
+### 在JavaScript中的表达式和语句有什么区别？
 
 #### Answer
 
-There are two main syntactic categories in JavaScript: expressions and statements. A third one is both together, referred to as an expression statement. They are roughly summarized as:
+JavaScript中有两个主要的语法类别：表达式和语句。或者将它们融合在一起，称为表达式声明。它们大致概括为：
 
-* **Expression**: produces a value
-* **Statement**: performs an action
-* **Expression statement**: produces a value and performs an action
+* **表达式**: 产生一个值
+* **语句**: 执行一个动作
+* **表达式声明**: 产生一个值并执行一个动作
 
-A general rule of thumb:
+一般的规则，如下:
 
-> If you can print it or assign it to a variable, it’s an expression. If you can’t, it’s a statement.
+> 如果您可以打印它或将其分配给变量，那么它就是一个表达式。如果你不能，那就是一个声明。
 
-##### Statements
+##### 声明
 
 ```js
 let x = 0
@@ -23,7 +23,7 @@ if (true) {
 }
 ```
 
-Statements appear as instructions that do something but don't produce values.
+语句显示为执行某些操作但不生成值的指令。
 
 ```js
 // Assign `x` to the absolute value of `y`.
@@ -35,11 +35,11 @@ if (y >= 0) {
 }
 ```
 
-The only expression in the above code is `y >= 0` which produces a value, either `true` or `false`. A value is not produced by other parts of the code.
+上面代码中唯一的表达式是“y> = 0”，它产生一个值，即“true”或“false”。代码的其他部分不会生成值。
 
-##### Expressions
+##### 表达式
 
-Expressions produce a value. They can be passed around to functions because the interpreter replaces them with the value they resolve to.
+表达式产生一个价值。 它们可以传递给函数，因为解释器用它们解析的值替换它们。
 
 ```js
 5 + 5 // => 10
@@ -49,20 +49,20 @@ lastCharacter("input") // => "t"
 true === true // => true
 ```
 
-##### Expression statements
+##### 表达式声明
 
-There is an equivalent version of the set of statements used before as an expression using the conditional operator:
+使用条件运算符来完成之前表达式语句的等效版本：
 
 ```js
 // Assign `x` as the absolute value of `y`.
 var x = y >= 0 ? y : -y
 ```
 
-This is both an expression and a statement, because we are declaring a variable `x` (statement) as an evaluation (expression).
+这既是表达式又是语句，因为我们将变量`x`（语句）声明为求值（表达式）。
 
 #### Good to hear
 
-* Function declarations vs function expressions
+* 函数声明 vs 函数表达式
 
 ##### Additional links
 

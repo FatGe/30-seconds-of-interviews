@@ -1,10 +1,10 @@
-### What is the difference between an element and a component in React?
+### 在 React 中元素和组件之间有什么区别?
 
 #### Answer
 
-An element is a plain JavaScript object that represents a DOM node or component. Elements are pure and never mutated, and are cheap to create.
+元素通常用来表示DOM节点或组件的纯JavaScript对象。元素是纯粹的，从不转换，并且创建的代价很小。
 
-A component is a function or class. Components can have state and take props as input and return an element tree as output (although they can represent generic containers or wrappers and don't necessarily have to emit DOM). Components can initiate side effects in lifecycle methods (e.g. AJAX requests, DOM mutations, interfacing with 3rd party libraries) and may be expensive to create.
+组件是函数或类。组件可以具有state并将props作为输入并返回元素树作为输出（尽管它们可以表示通用容器或包装器，并且不一定有DOM）。组件也可以在生命周期方法中组一些处理（例如，AJAX请求，DOM突变，与第三方库的接口），并且创建的代价可能很大。
 
 ```js
 const Component = () => "Hello"
@@ -14,8 +14,8 @@ const domNodeElement = <div />
 
 #### Good to hear
 
-* Elements are immutable, plain objects that describe the DOM nodes or components you want to render.
-* Components can be either classes or functions, that take props as an input and return an element tree as the output.
+* 元素是不可变的普通对象，用于描述要呈现的DOM节点或组件；
+* 组件可以是类或函数，它将props作为输入并返回元素树作为输出。
 
 ##### Additional links
 

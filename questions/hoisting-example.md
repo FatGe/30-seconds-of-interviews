@@ -1,4 +1,4 @@
-### What will the console log in this example?
+### 下面这段代码中 `console log` 会输出什么?
 
 ```js
 var foo = 1
@@ -11,12 +11,12 @@ foobar()
 
 #### Answer
 
-Due to hoisting, the local variable `foo` is declared before the `console.log` method is called. This means the local variable `foo` is passed as an argument to `console.log()` instead of the global one declared outside of the function. However, since the value is not hoisted with the variable declaration, the output will be `undefined`, not `2`.
+由于变量提升，在调用`console.log`方法之前声明了局部变量`foo`。这意味着局部变量`foo`作为参数传递给`console.log（）`而不是在函数外声明的全局变量。但是，由于变量声明没有提升该值，因此输出将是`undefined`，而不是`2`。
 
 #### Good to hear
 
-* Hoisting is JavaScript’s default behavior of moving declarations to the top
-* Mention of `strict` mode
+* 变量提升是JavaScript将声明移到顶部的默认行为
+* 提到`严格'模式
 
 ##### Additional links
 

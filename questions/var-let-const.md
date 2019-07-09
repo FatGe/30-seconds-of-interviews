@@ -1,16 +1,16 @@
-### What are the differences between `var`, `let`, `const` and no keyword statements?
+### `var`，`let`，`const`和没有关键字的语句有什么区别？
 
 #### Answer
 
 ##### No keyword
 
-When no keyword exists before a variable assignment, it is either assigning a global variable if one does not exist, or reassigns an already declared variable. In non-strict mode, if the variable has not yet been declared, it will assign the variable as a property of the global object (`window` in browsers). In strict mode, it will throw an error to prevent unwanted global variables from being created.
+如果在变量赋值之前不存在关键字，如果不存在全局变量，则赋值给全局变量，或重新赋值已声明的变量。在非严格模式下，如果尚未声明变量，它将把变量指定为全局对象的属性（浏览器中的`window`）。在严格模式下，它将抛出错误以防止创建不需要的全局变量。
 
 ##### var
 
-`var` was the default statement to declare a variable until ES2015. It creates a function-scoped variable that can be reassigned and redeclared. However, due to its lack of block scoping, it can cause issues if the variable is being reused in a loop that contains an asynchronous callback because the variable will continue to exist outside of the block scope.
+`var` 是ES2015之前声明变量的默认语句。 它创建一个函数范围的变量，可以重新分配和重新声明。但是，由于缺少块作用域，如果变量在包含异步回调的循环中重用，则可能会导致问题，因为变量在块作用域之外一直存在。
 
-Below, by the time the the `setTimeout` callback executes, the loop has already finished and the `i` variable is `10`, so all ten callbacks reference the same variable available in the function scope.
+例如，在执行`setTimeout`回调时，循环已经完成，`i`变量为'10`，因此所有十个回调都引用了函数作用域中可用的相同变量。
 
 ```js
 for (var i = 0; i < 10; i++) {
@@ -40,7 +40,7 @@ for (var i = 0; i < 10; i++) {
 
 ##### let
 
-`let` was introduced in ES2015 and is the new preferred way to declare variables that will be reassigned later. Trying to redeclare a variable again will throw an error. It is block-scoped so that using it in a loop will keep it scoped to the iteration.
+`let` 在ES2015中引入，是声明后将重新赋值的变量的首选方式。但是如果尝试再次重新声明变量将导致错误。此外它是块作用域的，因此在循环中使用它将使其作用于迭代。
 
 ```js
 for (let i = 0; i < 10; i++) {
@@ -53,7 +53,7 @@ for (let i = 0; i < 10; i++) {
 
 ##### const
 
-`const` was introduced in ES2015 and is the new preferred default way to declare all variables if they won't be reassigned later, even for objects that will be mutated (as long as the reference to the object does not change). It is block-scoped and cannot be reassigned.
+`const` 在ES2015中引入，如果变量以后不会被重新赋值，那么它是首选的声明方式。此外它存在与块状作用域，不能重新赋值。
 
 ```js
 const myObject = {}
@@ -63,10 +63,10 @@ myObject = "hello" // Error
 
 #### Good to hear
 
-* All declarations are hoisted to the top of their scope.
-* However, with `let` and `const` there is a concept called the temporal dead zone (TDZ). While the declarations are still hoisted, there is a period between entering scope and being declared where they cannot be accessed.
-* Show a common issue with using `var` and how `let` can solve it, as well as a solution that keeps `var`.
-* `var` should be avoided whenever possible and prefer `const` as the default declaration statement for all variables unless they will be reassigned later, then use `let` if so.
+* 所有声明都应该在其作用域的顶部；
+* 然而，使用`let`和`const`，有一个称为暂时死区（TDZ）的概念。意思是说由let/const声明的变量，当它们包含的词法环境(Lexical Environment)被实例化时会被创建，但只有在变量的词法绑定(LexicalBinding)已经被求值运算后，才能够被访问。
+* 显示使用`var`以及`let`如何解决它的常见问题，以及保持`var`的解决方案。
+* 应尽可能避免使用`var`，并且更喜欢`const`作为所有变量的默认声明语句，除非它们稍后会被重新分配，那就应当使用`let`。
 
 ##### Additional links
 

@@ -1,4 +1,4 @@
-### What does the following code evaluate to?
+### 以下代码的运行结果是什么？
 
 ```js
 typeof typeof 0
@@ -6,9 +6,9 @@ typeof typeof 0
 
 #### Answer
 
-It evaluates to `"string"`.
+它的运行结果为`“字符串”`。
 
-`typeof 0` evaluates to the string `"number"` and therefore `typeof "number"` evaluates to `"string"`.
+`typeof 0`求值为字符串`“number”`因此`typeof“number”`求值为``string“`。
 
 #### Good to hear
 

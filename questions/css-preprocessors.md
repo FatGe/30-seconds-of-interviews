@@ -1,13 +1,13 @@
-### What are the advantages of using CSS preprocessors?
+### 使用CSS预处理器有什么好处？
 
 #### Answer
 
-CSS preprocessors add useful functionality that native CSS does not have, and generally make CSS neater and more maintainable by enabling DRY (Don't Repeat Yourself) principles. Their terse syntax for nested selectors cuts down on repeated code. They provide variables for consistent theming (however, CSS variables have largely replaced this functionality) and additional tools like color functions (`lighten`, `darken`, `transparentize`, etc), mixins, and loops that make CSS more like a real programming language and gives the developer more power to generate complex CSS.
+CSS预处理器添加了原生CSS没有的有用功能，并且通常通过启用DRY（不要重复自己）原则使CSS更整洁，更易于维护。它们针对嵌套选择器的简洁语法减少了重复的代码。它们为一致的主题提供变量（然而，CSS变量已经在很大程度上取代了这个功能）和其他工具，如颜色函数（`lighten`，`darken`，`transparentize`等），mixins和循环，使CSS更像真实编程语言，为开发人员提供更多生成复杂CSS的能力。
 
 #### Good to hear
 
-* They allow us to write more maintainable and scalable CSS
-* Some disadvantages of using CSS preprocessors (setup, re-compilation time can be slow etc.)
+* 它们允许我们编写更易于维护和可扩展的CSS。
+* 使用CSS预处理器的一些缺点（设置，重新编译时间可能会很慢等）。
 
 ##### Additional links
 

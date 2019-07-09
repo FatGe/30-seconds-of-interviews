@@ -1,5 +1,7 @@
 ### Create a function `pipe` that performs left-to-right function composition by returning a function that accepts one argument.
 
+### 创建一个函数 `pipe`，它返回一个接受一个参数的函数来执行从左到右的函数组合。
+
 ```js
 const square = v => v * v
 const double = v => v * 2
@@ -10,7 +12,7 @@ res(3) // 19; addOne(double(square(3)))
 
 #### Answer
 
-Gather all supplied arguments using the rest operator `...` and return a unary function that uses `Array.prototype.reduce()` to run the value through the series of functions before returning the final value.
+使用rest运算符`...`收集所有提供的参数，并返回一个使用`Array.prototype.reduce（）`的一元函数，在返回最终值之前通过一系列函数运行该值。
 
 ```js
 const pipe = (...fns) => x => fns.reduce((v, fn) => fn(v), x)
@@ -18,7 +20,7 @@ const pipe = (...fns) => x => fns.reduce((v, fn) => fn(v), x)
 
 #### Good to hear
 
-* Function composition is the process of combining two or more functions to produce a new function.
+* 函数组合是将两个或多个函数组合以产生新函数的过程。
 
 ##### Additional links
 

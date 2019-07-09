@@ -1,8 +1,8 @@
-### What are fragments?
+### React 中 Fragment 代表什么?
 
 #### Answer
 
-Fragments allow a React component to return multiple elements without a wrapper, by grouping the children without adding extra elements to the DOM. Fragments offer better performance, lower memory usage, a cleaner DOM and can help in dealing with certain CSS mechanisms (e.g. tables, Flexbox and Grid).
+Fragment允许React组件在没有包装器的情况下返回多个元素，具体方法是在不向DOM添加额外元素的情况下对子元素进行分组。Fragment提供更好的性能，更低的内存使用率，更清晰的DOM，并且可以帮助处理某些CSS机制（例如表格，Flexbox和网格）。
 
 ```js
 render() {
@@ -29,7 +29,7 @@ render() {
 
 #### Good to hear
 
-* Fragments group multiple elements returned from a component, without adding a DOM element around them.
+* Fragment只是对从组件返回的多个元素进行分组，而不在它们周围添加DOM元素。
 
 ##### Additional links
 

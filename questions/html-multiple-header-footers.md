@@ -1,12 +1,12 @@
-### Can a web page contain multiple `<header>` elements? What about `<footer>` elements?
+### 网页可以包含多个`<header>`元素吗？那么`<footer>`元素呢？
 
 #### Answer
 
-Yes to both. The W3 documents state that the tags represent the header(`<header>`) and footer(`<footer>`) areas of their nearest ancestor "section". So not only can the page `<body>` contain a header and a footer, but so can every `<article>` and `<section>` element.
+对两者都是。 W3文档表明这个标签是表示其最近的祖先“section”的标题（“<header>”）和页脚（“<footer>”）区域。因此页面`<body>`不仅包含页眉和页脚，而且每个`<article>`和`<section>`元素也是如此。
 
 #### Good to hear
 
-* W3 recommends having as many as you want, but only 1 of each for each "section" of your page, i.e. body, section etc.
+* W3建议您拥有任意数量的内容，但页面的每个“部分”只有1个，即正文，部分等。
 
 ##### Additional links
 

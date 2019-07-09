@@ -1,8 +1,8 @@
-### What are higher-order components?
+### 什么是高阶组件？
 
 #### Answer
 
-A higher-order component (HOC) is a function that takes a component as an argument and returns a new component. It is a pattern that is derived from React’s compositional nature. Higher-order components are like **pure components** because they accept any dynamically provided child component, but they won’t modify or copy any behavior from their input components.
+高阶组件（HOC）是一个将组件作为参数并返回新组件的函数。这是一种源自React组成特性的模式。高阶组件类似于 **pure components** 因为它们接受任何动态提供的子组件，但它们不会修改或复制其输入组件中的任何行为。
 
 ```js
 const EnhancedComponent = higherOrderComponent(WrappedComponent)
@@ -10,7 +10,7 @@ const EnhancedComponent = higherOrderComponent(WrappedComponent)
 
 #### Good to hear
 
-* They can be used for state abstraction and manipulation, props manipulation, render high jacking, etc.
+* 它们可用于状态抽象和操作，控制 prop，优先渲染等。
 
 ##### Additional links
 

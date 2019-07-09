@@ -1,27 +1,23 @@
-### What is event delegation and why is it useful? Can you show an example of how to use it?
+### 什么是事件委托，为什么它有用？ 你能举例说明如何使用它吗？
 
 #### Answer
 
-Event delegation is a technique of delegating events to a single common ancestor. Due to event bubbling, events "bubble" up the DOM tree by executing any handlers progressively on each ancestor element up to the root that may be listening to it.
+主要用于解决事件出来程序过多的问题。事件委托主要是利用了时间冒泡，只指定一个事件处理程序，就可以管理某一类的所有事件。
 
-DOM events provide useful information about the element that initiated the event via `Event.target`. This allows the parent element to handle behavior as though the target element was listening to the event, rather than all children of the parent or the parent itself.
+DOM事件通过`Event.target`来提供触发事件元素的有用信息。同时允许父元素来进行相关处理，就像是目标元素正在侦听事件一样，而不是父元素的所有子元素或父元素本身。
 
-This provides two main benefits:
+主要有两点好处:
 
-* It increases performance and reduces memory consumption by only needing to register a single event listener to handle potentially thousands of elements.
-* If elements are dynamically added to the parent, there is no need to register new event listeners for them.
+* 它只需要注册一个事件监听器来处理所有元素，从而提高性能并减少内存消耗；
+* 如果元素动态添加到父元素，则无需为它们注册新的事件侦听器。
 
-Instead of:
-
-```js
+```
 document.querySelectorAll("button").forEach(button => {
   button.addEventListener("click", handleButtonClick)
 })
 ```
 
-Event delegation involves using a condition to ensure the child target matches our desired element:
-
-```js
+```
 document.addEventListener("click", e => {
   if (e.target.closest("button")) {
     handleButtonClick()
@@ -31,7 +27,7 @@ document.addEventListener("click", e => {
 
 #### Good to hear
 
-* The difference between event bubbling and capturing
+* 事件捕获以及事件冒泡的区别
 
 ##### Additional links
 

@@ -1,25 +1,25 @@
-### What is the difference between '+' and '~' sibling selectors?.
+### '+' 和 '~' 这两个兄弟选择之前有什么不同?
 
 #### Answer
 
-The General Sibling Selector `~` selects all elements that are siblings of a specified element.
+通用选择器 `~` 选择所有指定元素的兄弟元素。
 
-The following example selects all `<p>` elements that are siblings of `<div>` elements:
+以下示例选择所有`<p>`元素，它们是`<div>`元素的兄弟：
 
-```css
+相邻的兄弟选择器`+`选择所有与指定元素相邻的兄弟元素。
+
+```html
 div ~ p {
   background-color: blue;
 }
-```
 
-The Adjacent Sibling Selector `+` selects all elements that are the adjacent siblings of a specified element.
-
-The following example will select all `<p>` elements that are placed immediately after `<div>` elements:
-
-```css
 div + p {
   background-color: red;
 }
+
+<div></div>
+<p>Hi world</p>
+<p>Hello world</p>
 ```
 
 #### Good to hear

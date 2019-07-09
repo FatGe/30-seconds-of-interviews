@@ -1,8 +1,9 @@
-### What is context?
+### React 中 context 代表什么?
 
 #### Answer
 
-Context provides a way to pass data through the component tree without having to pass props down manually at every level. For example, authenticated user, locale preference, UI theme need to be accessed in the application by many components.
+Context 提供了一种通过组件树传递数据的方法，而无需在每个级别手动传递 props。
+例如，需要在应用程序中通过许多组件访问经过身份验证的用户，区域设置首选项，UI主题。
 
 ```js
 const { Provider, Consumer } = React.createContext(defaultValue)
@@ -10,13 +11,5 @@ const { Provider, Consumer } = React.createContext(defaultValue)
 
 #### Good to hear
 
-* Context provides a way to pass data through a tree of React components, without having to manually pass props.
-* Context is designed to share data that is considered _global_ for a tree of React components.
-
-##### Additional links
-
-* [React docs on Context](https://reactjs.org/docs/context.html)
-
-<!-- tags: (react,javascript) -->
-
-<!-- expertise: (2) -->
+* Context 提供了一种通过 React 组件树传递数据的方法，而无需手动传递 props.
+* Context 旨在为 React 组件树提供可共享的 _global_ 数据。

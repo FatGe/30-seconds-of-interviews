@@ -1,17 +1,17 @@
-### What is CORS?
+### CORS 是什么?
 
 #### Answer
 
-Cross-Origin Resource Sharing or CORS is a mechanism that uses additional HTTP headers to grant a browser permission to access resources from a server at an origin different from the website origin.
+Cross-Origin Resource Sharing 或 CORS 是一种机制，通过使用额外的 HTTP 字段来赋予游览器从不同于网站源的源服务器访问资源的权限。
 
-An example of a cross-origin request is a web application served from `http://mydomain.com` that uses AJAX to make a request for `http://yourdomain.com`.
+跨源请求的一个示例是从 `http：// mydomain.com` 提供的Web应用程序，它使用AJAX来发出对 `http：// yourdomain.com` 的请求。
 
-For security reasons, browsers restrict cross-origin HTTP requests initiated by JavaScript. `XMLHttpRequest` and `fetch` follow the same-origin policy, meaning a web application using those APIs can only request HTTP resources from the same origin the application was accessed, unless the response from the other origin includes the correct CORS headers.
+出于安全原因，浏览器会限制JavaScript发起的跨源HTTP请求。 `XMLHttpRequest`和`fetch`遵循同源策略，这意味着使用这些API的Web应用程序只能从访问应用程序的同一源请求HTTP资源，除非来自其他来源的响应包含正确的CORS头。
 
 #### Good to hear
 
-* CORS behavior is not an error,  it’s a security mechanism to protect users.
-* CORS is designed to prevent a malicious website that a user may unintentionally visit from making a request to a legitimate website to read their personal data or perform actions against their will.
+* CORS行为不是错误，它是保护用户的安全机制。
+* CORS旨在防止用户可能无意中访问的恶意网站，之后向合法网站发出请求以阅读其个人数据或执行违背其意愿的操作。
 
 ##### Additional links
 

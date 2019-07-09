@@ -1,20 +1,21 @@
-### Can you describe how CSS specificity works?
+### 你能描述 CSS 优先级是如何工作的吗？
 
 #### Answer
 
-Assuming the browser has already determined the set of rules for an element, each rule is assigned a matrix of values, which correspond to the following from highest to lowest specificity:
+假设浏览器已经确定了元素的规则集，则为每个规则分配一个值矩阵，这些值对应于以下内容：
 
-* Inline rules (binary - 1 or 0)
-* Number of id selectors
-* Number of class, pseudo-class and attribute selectors
-* Number of tags and pseudo-element selectors
+* 内联规则（二进制 -  1或0）
+* id选择器的数量
+* 类，伪类和属性选择器的数量
+* 标签和伪元素选择器的数量
 
-When two selectors are compared, the comparison is made on a per-column basis (e.g. an id selector will always be higher than any amount of class selectors, as ids have higher specificity than classes). In cases of equal specificity between multiple rules, the rules that comes last in the page's style sheet is deemed more specific and therefore applied to the element.
+当比较两个选择器时，比较是基于每行进行的（例如，id选择器总是高于任何数量的类选择器，因为id具有比类更高的优先级）。
+在多个规则之间具有相同优先级的情况下，页面样式表中最后出现的规则被认为更具体，因此应用于元素。
 
 #### Good to hear
 
-* Specificity matrix: [inline, id, class/pseudo-class/attribute, tag/pseudo-element]
-* In cases of equal specificity, last rule is applied
+* 优先级矩阵: [inline, id, class/pseudo-class/attribute, tag/pseudo-element]。
+* 相同优先级下，页面样式表中最后出现的规则生效。
 
 ##### Additional links
 

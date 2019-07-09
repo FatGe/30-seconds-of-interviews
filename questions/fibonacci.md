@@ -1,8 +1,7 @@
-### Generate an array, containing the Fibonacci sequence, up until the nth term.
+### 构建一个数组，内容到第 n 项的 Fibonacci 序列
 
 #### Answer
 
-Initialize an empty array of length `n`. Use `Array.prototype.reduce()` to add values into the array, using the sum of the last two values, except for the first two.
 
 ```js
 const fibonacci = n =>

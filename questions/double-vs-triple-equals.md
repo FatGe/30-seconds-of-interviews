@@ -1,14 +1,13 @@
-### What is the difference between the equality operators `==` and `===`?
+### `==` 和 `===`之间有什么不同?
 
 #### Answer
 
-Triple equals (`===`) checks for strict equality, which means both the type and value must be the same. Double equals (`==`) on the other hand first performs type coercion so that both operands are of the same type and then applies strict comparison.
+（`===`）相当于在执行严格地检查，这意味着类型和值必须相同。另一方面，（`==`）首先执行类型强制，以便两个操作数具有相同的类型，然后应用严格的比较。
 
 #### Good to hear
 
-* Whenever possible, use triple equals to test equality because loose equality `==` can have unintuitive results.
-* Type coercion means the values are converted into the same type.
-* Mention of falsy values and their comparison.
+* 尽量使用(`===`)来测试相等性，因为松散相等(`==`)可能会产生不直观的结果；
+* 类型强制意味着将值转换为相同的类型，可能会产生错误的结果。
 
 ##### Additional links
 
