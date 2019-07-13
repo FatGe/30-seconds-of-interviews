@@ -1,10 +1,10 @@
-### Describe the different ways to create an object. When should certain ways be preferred over others?
+### 在Javascript中有哪些方法能够创建一个对象?他们适用于什么场景下?
 
 #### Answer
 
-##### Object literal
+##### Object 语法
 
-Often used to store one occurrence of data.
+通常用于对出现过的数据进行缓存。
 
 ```js
 const person = {
@@ -17,9 +17,9 @@ const person = {
 person.birthday() // person.age === 51
 ```
 
-##### Constructor
+##### 构造函数
 
-Often used when you need to create multiple instances of an object, each with their own data that other instances of the class cannot affect. The `new` operator must be used before invoking the constructor or the global object will be mutated.
+通常在需要创建对象的多个实例时使用，每个实例都有自己的数据，而相互之间没有影响。在调用构造函数之前必须使用 `new` 运算符，否则将会改变全局对象。
 
 ```js
 function Person(name, age) {
@@ -35,9 +35,9 @@ person1.birthday() // person1.age === 51
 person2.birthday() // person2.age === 21
 ```
 
-##### Factory function
+##### 工厂函数
 
-Creates a new object similar to a constructor, but can store private data using a closure. There is also no need to use `new` before invoking the function or the `this` keyword. Factory functions usually discard the idea of prototypes and keep all properties and methods as own properties of the object.
+创建一个类似于构造函数的新对象，但可以使用闭包存储私有数据，这样就使得新对象的方法，不需要 `this` 指针就可以访问内部数据。同时在调用函数或 `this` 关键字之前也不需要使用 `new`。工厂函数通常会抛弃原型的概念，并将所有属性和方法保留为对象的自有属性。
 
 ```js
 const createPerson = (name, age) => {
@@ -51,7 +51,7 @@ person.birthday() // person.age === 51
 
 ##### `Object.create()`
 
-Sets the prototype of the newly created object.
+对新创建的对象的原型进行修改。
 
 ```js
 const personProto = {
@@ -64,7 +64,7 @@ person.age = 50
 person.birthday() // person.age === 51
 ```
 
-A second argument can also be supplied to `Object.create()` which acts as a descriptor for the new properties to be defined.
+第二个参数也可以提供给`Object.create（）`，它充当要定义的新属性的描述符。
 
 ```js
 Object.create(personProto, {
@@ -78,8 +78,8 @@ Object.create(personProto, {
 
 #### Good to hear
 
-* Prototypes are objects that other objects inherit properties and methods from.
-* Factory functions offer private properties and methods through a closure but increase memory usage as a tradeoff, while classes do not have private properties or methods but reduce memory impact by reusing a single prototype object.
+* 原型是一个对象，主要用于从中父对象中继承属性和方法。
+* 工厂函数通过闭包提供私有属性和方法，但增加内存使用量作为代价，虽然类没有私有属性或方法，但通过复用单个原型对象来减少内存影响。
 
 ##### Additional links
 

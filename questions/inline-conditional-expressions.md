@@ -1,10 +1,10 @@
-### What are inline conditional expressions?
+### 什么是内联条件表达式？
 
 #### Answer
 
-Since a JSX element tree is one large expression, you cannot embed statements inside. Conditional expressions act as a replacement for statements to use inside the tree.
+由于JSX元素树是一个大表达式，因此无法在其中嵌入语句。所以在元素树中使用条件表达式来代替语句。
 
-For example, this won't work:
+例如
 
 <!-- prettier-ignore -->
 ```js
@@ -24,7 +24,7 @@ function App({ messages, isVisible }) {
 }
 ```
 
-Logical AND `&&` and the ternary `? :` operator replace the `if`/`else` statements.
+逻辑运算符 `&&` 和三元 `？：` 运算符替换 `if` /`else` 语句。
 
 ```js
 function App({ messages, isVisible }) {

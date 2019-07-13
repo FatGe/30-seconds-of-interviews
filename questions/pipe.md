@@ -1,5 +1,3 @@
-### Create a function `pipe` that performs left-to-right function composition by returning a function that accepts one argument.
-
 ### 创建一个函数 `pipe`，它返回一个接受一个参数的函数来执行从左到右的函数组合。
 
 ```js

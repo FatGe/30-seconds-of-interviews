@@ -1,4 +1,4 @@
-### What does the following function return?
+### 执行以下函数会得到什么？
 
 ```js
 function greet() {
@@ -11,11 +11,11 @@ function greet() {
 
 #### Answer
 
-Because of JavaScript's automatic semicolon insertion (ASI), the compiler places a semicolon after `return` keyword and therefore it returns `undefined` without an error being thrown.
+由于JavaScript的自动分号插入（ASI），编译器在`return`关键字后放置一个分号，因此返回`undefined`而不会抛出错误。
 
 #### Good to hear
 
-* Automatic semicolon placement can lead to time-consuming bugs
+* 自动分号放置可能会导致耗时的错误
 
 ##### Additional links
 

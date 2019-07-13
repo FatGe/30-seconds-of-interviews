@@ -1,19 +1,19 @@
-### Are semicolons required in JavaScript?
+### JavaScript中是否需要分号？
 
 #### Answer
 
-Sometimes. Due to JavaScript's automatic semicolon insertion, the interpreter places semicolons after most statements. This means semicolons can be omitted in most cases.
+有时候需要。由于JavaScript自动分号插入，解释器会在大多数语句之后放置分号。这意味着在大多数情况下可以省略分号。
 
-However, there are some cases where they are required. They are not required at the beginning of a block, but are if they follow a line and:
+但是，在某些情况下则是一定要添加的。例如
 
-1.  The line starts with `[`
+1. 以 `[` 开头
 
 ```js
 const previousLine = 3
 ;[1, 2, previousLine].map(n => n * 2)
 ```
 
-2.  The line starts with `(`
+2. 以 `(` 开头
 
 ```js
 const previousLine = 3
@@ -22,12 +22,12 @@ const previousLine = 3
 })()
 ```
 
-In the above cases, the interpreter does not insert a semicolon after `3`, and therefore it will see the `3` as attempting object property access or being invoked as a function, which will throw errors.
+在上面的例子中，解释器在 `3` 之后不插入分号，因此它会将 `3` 视为尝试对象属性访问或被调用为函数，这会抛出错误。
 
 #### Good to hear
 
-* Semicolons are usually optional in JavaScript but have edge cases where they are required.
-* If you don't use semicolons, tools like Prettier will insert semicolons for you in the places where they are required on save in a text editor to prevent errors.
+* 分号在JavaScript中通常是可选的，但是在某些特殊情况下是一定需要他的；
+* 如果不使用分号，像Prettier这样的工具会在文本编辑器中保存时为您插入分号以防止出错。
 
 ##### Additional links
 

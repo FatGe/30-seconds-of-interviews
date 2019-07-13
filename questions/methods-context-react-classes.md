@@ -1,8 +1,8 @@
-### How do you ensure methods have the correct `this` context in React component classes?
+### 如何确保 methods 在 React 组件类中具有正确的 `this` 上下文？
 
 #### Answer
 
-In JavaScript classes, the methods are not bound by default. This means that their `this` context can be changed (in the case of an event handler, to the element that is listening to the event) and will not refer to the component instance. To solve this, `Function.prototype.bind()` can be used to enforce the `this` context as the component instance.
+在JavaScript类中，默认情况下是不对方法进行绑定的。这意味着它们的`this`上下文可以更改（在事件处理程序的情况下，更改为正在侦听事件的元素），并且不会引用组件实例。为了解决这个问题，可以使用`Function.prototype.bind（）`来强制执行`this`上下文作为组件实例
 
 ```js
 constructor(props) {
@@ -15,7 +15,7 @@ handleClick() {
 }
 ```
 
-* The `bind` approach can be verbose and requires defining a `constructor`, so the new public class fields syntax is generally preferred:
+* `bind`方法可能很冗长，同时还需要定义一个`constructor`，所以通常首选新的公共类字段语法：
 
 ```js
 handleClick = () => {
@@ -31,17 +31,17 @@ render() {
 }
 ```
 
-* You can also use an inline arrow function, because lexical `this` (referring to the component instance) is preserved:
+* 您还可以使用内联箭头函数，使得`this`（指代组件实例）被保留：
 
 ```js
 <button onClick={e => this.handleClick(e)}>Click me</button>
 ```
 
-Note that extra re-rendering can occur using this technique because a new function reference is created on render, which gets passed down to child components and breaks `shouldComponentUpdate` / `PureComponent` shallow equality checks to prevent unnecessary re-renders. In cases where performance is important, it is preferred to go with `bind` in the constructor, or the public class fields syntax approach, because the function reference remains constant.
+请注意，使用此技术会引起额外的重新渲染，因为在渲染时会创建新的函数引用, 如果将它传递给子组件会使得 `shouldComponentUpdate` / `PureComponent` 浅层相等检测来防止不必要的渲染这个能力失效。在性能很重要的情况下，最好在构造函数中使用`bind`，或者使用公共类字段语法方法，因为函数引用保持不变。
 
 #### Good to hear
 
-* You can either bind methods to the component instance context in the constructor, use public class fields syntax, or use inline arrow functions.
+* 您可以将方法绑定到构造函数中的组件实例上下文，使用公共类字段语法或使用内联箭头函数。
 
 ##### Additional links
 

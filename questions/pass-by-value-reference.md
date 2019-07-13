@@ -1,12 +1,12 @@
-### Does JavaScript pass by value or by reference?
+### JavaScript是按值传递还是按引用传递？
 
 #### Answer
 
-JavaScript always passes by value. However, with objects, the value is a reference to the object.
+JavaScript总是按值传递。但是，对于对象，传递的是对象的引用。
 
 #### Good to hear
 
-* Difference between pass-by-value and pass-by-reference
+* 传值和传递参数之间的差异
 
 ##### Additional links
 

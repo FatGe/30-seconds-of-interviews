@@ -1,26 +1,24 @@
-### What is HTML5 Web Storage? Explain `localStorage` and `sessionStorage`.
+### 什么是HTML5 Web存储？解释`localStorage`和`sessionStorage`。
 
 #### Answer
 
-With HTML5, web pages can store data locally within the user’s browser.
-The data is stored in name/value pairs, and a web page can only access data stored by itself.
+使用HTML5，网页可以在用户的​​浏览器中本地存储数据。数据存储在名称/值对中，网页只能访问自己存储的数据。
 
-**Differences between `localStorage` and `sessionStorage` regarding lifetime:**
+**在生命周期方面 `localStorage` 与 `sessionStorage` 之间有什么不同:**
 
-* Data stored through `localStorage` is permanent: it does not expire and remains stored on the user’s computer until a web app deletes it or the user asks the browser to delete it.
-* `sessionStorage` has the same lifetime as the top-level window or browser tab in which the data got stored. When the tab is permanently closed, any data stored through `sessionStorage` is deleted.
+* 通过`localStorage`存储的数据是永久性的：它不会过期并保留在用户的计算机上，直到Web应用程序删除它或用户要求浏览器删除它。
+* `sessionStorage`与存储数据的顶级窗口或浏览器选项卡具有相同的生命周期。当标签永久关闭时，通过`sessionStorage`存储的任何数据都将被删除。
+**在存储范围方面 `localStorage` 和 `sessionStorage` 之间有什么不同:**
+两种形式的存储都作用于文档源，因此具有不同来源的文档永远不会共享存储的对象。
 
-**Differences between `localStorage` and `sessionStorage` regarding storage scope:**
-Both forms of storage are scoped to the document origin so that documents with different origins will never share the stored objects.
-
-* `sessionStorage` is also scoped on a per-window basis. Two browser tabs with documents from the same origin have separate `sessionStorage` data.
-* Unlike in `localStorage`, the same scripts from the same origin can't access each other's `sessionStorage` when opened in different tabs.
+* `sessionStorage`也是基于每个窗口的范围。具有来自同一来源的文档的两个浏览器选项卡具有单独的“sessionStorage”数据。
+* 与`localStorage`不同，当在不同的选项卡中打开时，来自同一来源的相同脚本无法访问彼此的`sessionStorage`。
 
 #### Good to hear
 
-* Earlier, this was done with cookies.
-* The storage limit is far larger (at least 5MB) than with cookies and its faster.
-* The data is never transferred to the server and can only be used if the client specifically asks for it.
+* 早些时候，这是用cookies完成的；
+* 存储限制比使用cookie要大得多（至少5MB），而且速度更快；
+* 数据永远不会传输到服务器，只有在客户端特别要求时才能使用。
 
 ##### Additional links
 

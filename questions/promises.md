@@ -1,9 +1,9 @@
-### What are Promises?
+### 什么是 Promises?
 
 #### Answer
 
-The `Promise` object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value.
-An example can be the following snippet, which after 100ms prints out the result string to the standard output. Also, note the catch, which can be used for error handling. `Promise`s are chainable.
+`Promise` 对象表示异步操作的最终完成（或失败）及其结果值。
+例如以下这代码段，在100ms之后将结果字符串打印到标准输出。另外，请注意catch，它可用于错误处理。
 
 ```js
 new Promise((resolve, reject) => {
@@ -16,8 +16,6 @@ new Promise((resolve, reject) => {
 ```
 
 #### Good to hear
-
-* Take a look into the other questions regarding `Promise`s!
 
 ##### Additional links
 

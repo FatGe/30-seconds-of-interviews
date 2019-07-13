@@ -1,8 +1,8 @@
-### How do you pass an argument to an event handler or callback?
+### 在React中如何将参数传递给事件处理程序或回调？
 
 #### Answer
 
-You can use an arrow function to wrap around an event handler and pass arguments, which is equivalent to calling `bind`:
+您可以使用箭头函数来包装事件处理程序并传递参数，这相当于调用`bind`：
 
 ```js
 <button onClick={() => this.handleClick(id)} />

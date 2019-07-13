@@ -1,8 +1,8 @@
-### What is the difference between a parameter and an argument?
+### 在Javascript中parameter与argument之间有什么区别?
 
 #### Answer
 
-Parameters are the variable names of the function definition, while arguments are the values given to a function when it is invoked.
+parameter代表形参是函数定义的变量名，而argument代表实参是调用函数时赋予函数的值。
 
 ```js
 function myFunction(parameter1, parameter2) {
@@ -13,8 +13,8 @@ myFunction("argument1", "argument2")
 
 #### Good to hear
 
-* `arguments` is an array-like object containing information about the arguments supplied to an invoked function.
-* `myFunction.length` describes the arity of a function (how many parameters it has, regardless of how many arguments it is supplied).
+* `arguments` 是一个类数组的对象，包含有关提供给调用函数的参数的信息；
+* `myFunction.length` 描述函数的参数个数（它有多少个参数，无论它提供了多少个参数）。
 
 ##### Additional links
 

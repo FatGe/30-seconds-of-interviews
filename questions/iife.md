@@ -1,8 +1,8 @@
-### What is the reason for wrapping the entire contents of a JavaScript source file in a function that is immediately invoked?
+### 将JavaScript源文件的全部内容都包装在立即调用的函数中的原因是什么？
 
 #### Answer
 
-This technique is very common in JavaScript libraries. It creates a closure around the entire contents of the file which creates a private namespace and thereby helps avoid potential name clashes between different JavaScript modules and libraries. The function is immediately invoked so that the namespace (library name) is assigned the return value of the function.
+这种技术在JavaScript库中非常常见。它围绕文件的整个内容创建一个闭包，创建一个私有命名空间，从而有助于避免不同JavaScript模块和库之间潜在的名称冲突。立即调用该函数，以便为命名空间（库名称）分配函数的返回值。
 
 ```js
 const myLibrary = (function() {
@@ -17,8 +17,8 @@ myLibrary.publicMethod() // 2
 
 #### Good to hear
 
-* Used among many popular JavaScript libraries
-* Creates a private namespace
+* 用于许多JavaScript库
+* 创建私有的命名空间
 
 ##### Additional links
 

@@ -1,12 +1,12 @@
-### What is the event loop in Node.js?
+### 在Node.js中的event loop是什么?
 
 #### Answer
 
-The event loop handles all async callbacks. Callbacks are queued in a loop, while other code runs, and will run one by one when the response for each one has been received.
+事件循环是用来处理所有异步回调。回调在循环中排队，而其他代码运行，并且在收到每个代码的响应时将逐个运行。
 
 #### Good to hear
 
-* The event loop allows Node.js to perform non-blocking I/O operations, despite the fact that JavaScript is single-threaded
+* 事件循环允许Node.js执行非阻塞I / O操作，尽管JavaScript是单线程的。
 
 ##### Additional links
 

@@ -1,10 +1,10 @@
-### What is memoization?
+### memoization 是什么?
 
 #### Answer
 
-Memoization is the process of caching the output of function calls so that subsequent calls are faster. Calling the function again with the same input will return the cached output without needing to do the calculation again.
+memoization 是一种优化技术，主要用于通过存储昂贵的函数调用的结果来加速计算机程序，并在再次发生相同的输入时返回缓存的结果。
 
-A basic implementation in JavaScript looks like this:
+在 JavaScript 中的实现如下
 
 ```js
 const memoize = fn => {
@@ -21,9 +21,8 @@ const memoize = fn => {
 
 #### Good to hear
 
-* The above technique returns a unary function even if the function can take multiple arguments.
-* The first function call will be slower than usual because of the overhead created by checking if a cached result exists and setting a result before returning the value.
-* Memoization increases performance on subsequent function calls but still needs to do work on the first call.
+* memoization 是一个空间换时间的方式，存储执行结果，下次再次发生相同的输入会直接输出结果，提高了执行的速度。
+* memoization 是一种优化技术，避免一些不必要的重复计算，可以提高计算速度。
 
 ##### Additional links
 

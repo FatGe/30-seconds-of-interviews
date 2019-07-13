@@ -1,4 +1,4 @@
-### NodeJS often uses a callback pattern where if an error is encountered during execution, this error is passed as the first argument to the callback. What are the advantages of this pattern?
+### NodeJS经常使用回调模式，如果在执行期间遇到错误，此错误作为回调的第一个参数传递。这种模式的优点是什么？
 
 ```js
 fs.readFile(filePath, function(err, data) {
@@ -14,15 +14,15 @@ fs.readFile(filePath, function(err, data) {
 
 #### Answer
 
-Advantages include:
+优势在于:
 
-* Not needing to process data if there is no need to even reference it
-* Having a consistent API leads to more adoption
-* Ability to easily adapt a callback pattern that will lead to more maintainable code
+* 如果不需要引用数据，则无需处理数据
+* 拥有一致的API可以带来更多的复用
+* 能够轻松调整回调模式，从而实现更易维护的代码
 
-As you can see from below example, the callback is called with null as its first argument if there is no error. However, if there is an error, you create an Error object, which then becomes the callback's only parameter. The callback function allows a user to easily know whether or not an error occurred.
+从下面的示例中可以看出，如果没有错误，则调用回调，并将null作为其第一个参数。但是，如果出现错误，则创建一个Error对象，然后该对象将成为回调唯一的参数。这种回调函数模式可以使用户容易地知道是否发生了错误。
 
-This practice is also called the _Node.js error convention_, and this kind of callback implementations are called _error-first callbacks_.
+这种做法也称 _Node.js error convention_，这种回调实现称为 _error-first callbacks_。
 
 ```js
 var isTrue = function(value, callback) {
@@ -54,8 +54,6 @@ isTrue(true, callback)
 ```
 
 #### Good to hear
-
-* This is just a convention. However, you should stick to it.
 
 ##### Additional links
 

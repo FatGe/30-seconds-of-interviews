@@ -1,4 +1,4 @@
-### Create a function that masks a string of characters with `#` except for the last four (4) characters.
+### 创建一个用`#`屏蔽字符串的函数，除了最后四（4）个字符。
 
 ```js
 mask("123456789") // "#####6789"
@@ -6,9 +6,9 @@ mask("123456789") // "#####6789"
 
 #### Answer
 
-> There are many ways to solve this problem, this is just one one of them.
+> 有许多种方法来实现这个需求，下面展示其中一种
 
-Using `String.prototype.slice()` we can grab the last 4 characters of the string by passing `-4` as an argument. Then, using `String.prototype.padStart()`, we can pad the string to the original length with the repeated mask character.
+使用 `String.prototype.slice()` 来获取字符串的后四个字符。然后使用 `String.prototype.padStart()` 来将 `#` 填充至字符串中。
 
 ```js
 const mask = (str, maskChar = "#") =>
@@ -17,7 +17,7 @@ const mask = (str, maskChar = "#") =>
 
 #### Good to hear
 
-* Short, one-line functional solutions to problems should be preferred provided they are efficient
+* 如果解决方案有效，应该首选简短的函数式问题解决方案
 
 ##### Additional links
 

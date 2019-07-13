@@ -1,8 +1,8 @@
-### How do you write comments inside a JSX tree in React?
+### 如何在React中的JSX树中写注释？
 
 #### Answer
 
-Comments must be wrapped inside curly braces `{}` and use the `/* */` syntax.
+注释必须包含在大括号`{}`中并使用`/ * * /`语法。
 
 ```jsx
 const tree = (

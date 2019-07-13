@@ -1,21 +1,23 @@
-### What is a key? What are the benefits of using it in lists?
+### 写 React / Vue 项目时为什么要在列表组件中写 key，它是什么？其作用是什么？
 
 #### Answer
 
-Keys are a special string attribute that helps React identify which items have been changed, added or removed. They are used when rendering array elements to give them a stable identity. Each element's key must be unique (e.g. IDs from the data or indexes as a last resort).
+Key是一种特殊的字符串属性，可帮助React识别哪些项已被更改，添加或删除。它们在渲染数组元素时使用，用于赋予元素一个稳定的标识。每个元素的键必须是唯一的（例如，来自数据或索引的ID作为最后的手段）。
+
+Key的作用是为了在diff算法执行时更快的找到对应的节点，提高diff速度。
 
 ```js
 const todoItems = todos.map(todo => <li key={todo.id}>{todo.text}</li>)
 ```
 
-* Using indexes as keys is not recommended if the order of items may change, as it might negatively impact performance and may cause issues with component state.
-* If you extract list items as a separate component then apply keys on the list component instead of the `<li>` tag.
+* 如果列表中每项的顺序可能会发生变化，则不建议使用索引作为键，因为它可能会对性能产生负面影响，并可能导致组件状态出现问题；
+* 如果将列表项作为单独的组件提取，则在列表组件上应用Key而不是`<li>`标签上。
 
 #### Good to hear
 
-* Keys give elements in a collection a stable identity and help React identify changes.
-* You should avoid using indexes as keys if the order of items may change.
-* You should lift the key up to the component, instead of the `<li>` element, if you extract list items as components.
+* Key为集合中的元素提供稳定的标识，并帮助React识别更改；
+* 如果列表中项目的顺序可能会更改，则应避免使用索引作为键；
+* 如果将列表项作为单独的组件提取，则在列表组件上应用Key而不是`<li>`标签上。
 
 ##### Additional links
 

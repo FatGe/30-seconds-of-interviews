@@ -1,14 +1,14 @@
-### What is the difference between `null` and `undefined`?
+### `null`以及`undefined`之间有什么不同?
 
 #### Answer
 
-In JavaScript, two values discretely represent nothing - `undefined` and `null`. The concrete difference between them is that `null` is explicit, while `undefined` is implicit. When a property does not exist or a variable has not been given a value, the value is `undefined`. `null` is set as the value to explicitly indicate “no value”. In essence, `undefined` is used when the nothing is not known, and `null` is used when the nothing is known.
+`null`与`undefined`之间最核心的区别是，`null`是显示的，而`undefined`是隐式的。当属性不存在或者变量没有赋值时，该值为`undefined`。`null`被设置为明确指示“无值”的值。
 
 #### Good to hear
 
-* `typeof undefined` evaluates to `"undefined"`.
-* `typeof null` evaluates `"object"`. However, it is still a primitive value and this is considered an implementation bug in JavaScript.
-* `undefined == null` evaluates to `true`.
+* `typeof undefined` 会得到 `"undefined"`；
+* `typeof null` 得到 `"object"`。但是，它仍然是一个原始值，这被认为是JavaScript中的实现错误。
+* `undefined == null` 会得到 `true`.
 
 ##### Additional links
 

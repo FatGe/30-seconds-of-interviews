@@ -1,14 +1,14 @@
-### What is the difference between lexical scoping and dynamic scoping?
+### 词法作用域和动态作用域有什么区别？
 
 #### Answer
 
-Lexical scoping refers to when the location of a function's definition determines which variables you have access to. On the other hand, dynamic scoping uses the location of the function's invocation to determine which variables are available.
+词汇作用域是指当一个函数的定义的位置决定了可以到访问哪些变量。在另一方面，动态作用域是指函数的调用的位置，以确定哪些变量是可用的。
 
 #### Good to hear
 
-* Lexical scoping is also known as static scoping.
-* Lexical scoping in JavaScript allows for the concept of closures.
-* Most languages use lexical scoping because it tends to promote source code that is more easily understood.
+* 词法作用域也称为静态作用域；
+* 在JavaScript中的词法作用域等同于闭包的概念；
+* 大多数语言使用词法作用域，因为它倾向于促进更容易理解的源代码。
 
 ##### Additional links
 

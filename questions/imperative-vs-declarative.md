@@ -1,17 +1,18 @@
-### Explain the differences between imperative and declarative programming.
+### 命令式和声明式编程之间的区别。
 
 #### Answer
 
-These two types of programming can roughly be summarized as:
+这两种类型的编程大致可以概括为：
 
-* Imperative: **how** to achieve something
-* Declarative: **what** should be achieved
+* 命令式: **how** 实现目标
+* 声明式: **what** 应该实现
 
-A common example of declarative programming is CSS. The developer specifies CSS properties that describe what something should look like rather than how to achieve it. The "how" is abstracted away by the browser.
-
+声明性编程的一个常见例子是CSS。开发人员指定CSS属性来描述应该是什么样子而不是如何实现它。至于 "how" 则是由浏览器抽象出来。
 On the other hand, imperative programming involves the steps required to achieve something. In JavaScript, the differences can be contrasted like so:
 
-##### Imperative
+另一方面，命令式编程包含实现某些目标所需的步骤。在JavaScript中，差异可以如下对比：
+
+##### 命令式
 
 ```js
 const numbers = [1, 2, 3, 4, 5]
@@ -21,21 +22,21 @@ for (let i = 0; i < numbers.length; i++) {
 }
 ```
 
-We manually loop over the numbers of the array and assign the new index as the number doubled.
+我们手动循环遍历数组的数字，并将新索引指定为加倍的数字。
 
-##### Declarative
+##### 声明式
 
 ```js
 const numbers = [1, 2, 3, 4, 5]
 const numbersDoubled = numbers.map(n => n * 2)
 ```
 
-We declare that the new array is mapped to a new one where each value is doubled.
+我们声明新数组映射到一个新数组，其中每个值都加倍。
 
 #### Good to hear
 
-* Declarative programming often works with functions and expressions. Imperative programming frequently uses statements and relies on low-level features that cause mutations, while declarative programming has a strong focus on abstraction and purity.
-* Declarative programming is more terse and easier to process at a glance.
+* 声明性编程通常适用于函数和表达式。命令式编程经常使用语句并依赖于低级特性来完成修改，而声明式编程则强烈关注抽象和纯粹。
+* 声明性编程更简洁，更容易一目了然。
 
 ##### Additional links
 

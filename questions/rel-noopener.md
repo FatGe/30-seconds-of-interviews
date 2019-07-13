@@ -1,13 +1,13 @@
-### Where and why is the `rel="noopener"` attribute used?
+### `rel =“noopener”`是什么？它的作用又是什么？
 
 #### Answer
 
-The `rel="noopener"` is an attribute used in `<a>` elements (hyperlinks). It prevents pages from having a `window.opener` property, which would otherwise point to the page from where the link was opened and would allow the page opened from the hyperlink to manipulate the page where the hyperlink is.
+`rel =“noopener”`是`<a>`标签（超链接）中使用的属性。它可以防止页面具有`window.opener`属性，否则该属性将指向打开链接的页面，并允许从超链接打开的页面操作超链接所在的页面。
 
 #### Good to hear
 
-* `rel="noopener"` is applied to hyperlinks.
-* `rel="noopener"` prevents opened links from manipulating the source page.
+* `rel="noopener"` 适用于超链接；
+* `rel="noopener"` 防止打开的链接操纵源页面。
 
 ##### Additional links
 

@@ -1,10 +1,11 @@
-### How to apply prop validation in React?
+### 如何在React中使用prop验证？
 
 #### Answer
 
-When the application is running in development mode, React will automatically check for all props that we set on components to make sure they are the correct data type. For incorrect data types, it will generate warning messages in the console for development mode. They are stripped in production mode due to their performance impact. Required props are defined with `isRequired`.
+当应用程序在开发模式下运行时，React将自动检查我们在组件上设置的所有prop，以确保它们是正确的数据类型。对于不正确的数据类型，它将在控制台中为开发模式生成警告消息。
+由于性能影响，在生产模式下不会被打包到最终的代码中。所需的prop也用`isRequired`定义。
 
-For example, we define `propTypes` for component as below:
+例如, 可以定义 `propTypes` :
 
 ```js
 import PropTypes from "prop-types"
@@ -26,8 +27,8 @@ class User extends React.Component {
 
 #### Good to hear
 
-* We can define custom `propTypes`
-* Using `propTypes` is not mandatory. However, it is a good practice and can reduce bugs.
+* 可以自定义 `propTypes`。
+* 使用`propTypes`不是强制性的。但是，这是一个很好的做法，可以减少错误。
 
 ##### Additional links
 

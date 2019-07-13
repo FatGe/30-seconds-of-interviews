@@ -1,17 +1,17 @@
-### What is the difference between synchronous and asynchronous code in JavaScript?
+### JavaScript中的同步代码和异步代码有什么区别？
 
 #### Answer
 
-Synchronous means each operation must wait for the previous one to complete.
+同步意味着每个操作必须等待前一个操作完成。
 
-Asynchronous means an operation can occur while another operation is still being processed.
+异步意味着在仍在处理另一个操作时可以进行操作。
 
-In JavaScript, all code is synchronous due to the single-threaded nature of it. However, asynchronous operations not part of the program (such as `XMLHttpRequest` or `setTimeout`) are processed outside of the main thread because they are controlled by native code (browser APIs), but callbacks part of the program will still be executed synchronously.
+在JavaScript中，由于它的单线程特性，所有代码都是同步的。但是，这不意味着异步操作（例如`XMLHttpRequest`或`setTimeout`）是在主线程之外处理的，它们还是由本机代码（浏览器API）控制的，异步程序的回调部分仍然会同步执行。
 
 #### Good to hear
 
-* JavaScript has a concurrency model based on an "event loop".
-* Functions like `alert` block the main thread so that no user input is registered until the user closes it.
+* JavaScript具有基于“事件循环”的并发模型；
+* 像`alert`这样的函数会阻塞主线程，因此在用户关闭之前不会注册任何用户输入。
 
 ##### Additional links
 

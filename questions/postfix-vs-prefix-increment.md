@@ -1,10 +1,10 @@
-### What is the difference between the postfix `i++` and prefix `++i` increment operators?
+### `i ++` 和 `++ i` 两个运算符有什么区别？
 
 #### Answer
 
-Both increment the variable value by 1. The difference is what they evaluate to.
+两者都将变量值增加1，差异是他们执行结果。
 
-The postfix increment operator evaluates to the value _before_ it was incremented.
+后缀增量运算符求值为_before_它递增的值。
 
 ```js
 let i = 0
@@ -12,7 +12,7 @@ i++ // 0
 // i === 1
 ```
 
-The prefix increment operator evaluates to the value _after_ it was incremented.
+前缀增量运算符求值为_after_它递增的值。
 
 ```js
 let i = 0

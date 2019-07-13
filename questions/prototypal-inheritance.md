@@ -1,10 +1,19 @@
-### How does prototypal inheritance differ from classical inheritance?
+### 原型继承与经典继承有何不同？
 
 #### Answer
 
-In the classical inheritance paradigm, object instances inherit their properties and functions from a class, which acts as a blueprint for the object. Object instances are typically created using a constructor and the `new` keyword.
+在经典继承范例中，对象实例从类继承它们的属性和函数，该类充当对象的蓝图。通常使用构造函数和`new`关键字创建对象实例。
 
-In the prototypal inheritance paradigm, object instances inherit directly from other objects and are typically created using factory functions or `Object.create()`.
+在原型继承范例中，对象实例直接从其他对象继承，通常使用工厂函数或 `Object.create()` 创建。
+
+```
+Object.create = function (proto) {
+    function F() {}
+    F.prototype = proto;
+
+    return new F();
+};
+```
 
 #### Good to hear
 

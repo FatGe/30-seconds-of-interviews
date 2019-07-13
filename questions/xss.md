@@ -1,19 +1,17 @@
-### What is a cross-site scripting attack (XSS) and how do you prevent it?
+### 什么是跨站脚本攻击 (XSS) ，如何防御它?
 
 #### Answer
 
-XSS refers to client-side code injection where the attacker injects malicious scripts into a legitimate website or web application. This is often achieved when the application does not validate user input and freely injects dynamic HTML content.
+XSS是指客户端代码注入，攻击者将恶意脚本注入合法网站或Web应用程序。当应用程序不验证用户输入并自由注入动态HTML内容时，通常会实现这一点。例如，如果一个论坛的评论系统未验证的用户输入就将其显示在页面中，则该评论系统将面临风险。如果注释包含未转义的HTML，则注释可以在网站中注入一个 `<script>` 标签，其他用户将会执行该简本。
 
-For example, a comment system will be at risk if it does not validate or escape user input. If the comment contains unescaped HTML, the comment can inject a `<script>` tag into the website that other users will execute against their knowledge.
-
-* The malicious script has access to cookies which are often used to store session tokens. If an attacker can obtain a user’s session cookie, they can impersonate the user.
-* The script can arbitrarily manipulate the DOM of the page the script is executing in, allowing the attacker to insert pieces of content that appear to be a real part of the website.
-* The script can use AJAX to send HTTP requests with arbitrary content to arbitrary destinations.
+* 恶意脚本可以访问 `document.cookie` 通常用于存储会话令牌的cookie。如果攻击者可以获取到用户的会话cookie，则他们可以冒充用户；
+* 该脚本可以任意操作脚本执行的页面的DOM；
+* 该脚本可以使用AJAX将具有任意内容的HTTP请求发送到任意位置。
 
 #### Good to hear
 
-* On the client, using `textContent` instead of `innerHTML` prevents the browser from running the string through the HTML parser which would execute scripts in it.
-* On the server, escaping HTML tags will prevent the browser from parsing the user input as actual HTML and therefore won't execute the script.
+* 在客户端上，使用 `textContent` 而不是 `innerHTML` 可以防止浏览器通过HTML解析器运行字符串，HTML解析器将在其中执行脚本；
+* 在服务器上，转义HTML标记将阻止浏览器将用户输入解析为实际HTML，因此不会执行脚本。
 
 ##### Additional links
 

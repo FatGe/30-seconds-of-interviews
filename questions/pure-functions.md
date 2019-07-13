@@ -1,15 +1,15 @@
-### What is a pure function?
+### 纯函数是什么?
 
 #### Answer
 
-A pure function is a function that satisfies these two conditions:
+纯函数是满足以下两个条件的函数：
 
-* Given the same input, the function returns the same output.
-* The function doesn't cause side effects outside of the function's scope (i.e. mutate data outside the function or data supplied to the function).
+* 给定相同的输入，该函数返回相同的输出。
+* 该函数不会在函数范围之外引起副作用（即修改函数外的数据或提供给函数的数据）。
 
-Pure functions can mutate local data within the function as long as it satisfies the two conditions above.
+纯函数可以在函数内改变局部数据，只要它满足上述两个条件即可。
 
-##### Pure
+##### 纯净
 
 ```js
 const a = (x, y) => x + y
@@ -17,7 +17,7 @@ const b = (arr, value) => arr.concat(value)
 const c = arr => [...arr].sort((a, b) => a - b)
 ```
 
-##### Impure
+##### 非纯净
 
 ```js
 const a = (x, y) => x + y + Math.random()
@@ -27,9 +27,9 @@ const c = arr => arr.sort((a, b) => a - b)
 
 #### Good to hear
 
-* Pure functions are easier to reason about due to their reliability.
-* All functions should be pure unless explicitly causing a side effect (i.e. `setInnerHTML`).
-* If a function does not return a value, it is an indication that it is causing side effects.
+* 由于其可靠性，纯函数更容易理解。
+* 除非明确地产生副作用（即`setInnerHTML`），否则所有函数都应该是纯函数。
+* 如果函数未返回值，则表明它正在引起副作用。
 
 ##### Additional links
 
